@@ -9,13 +9,13 @@ This MediaWiki extension adds **syntaxhighlight** tag that is implemented using
 
 ## Installation
 
-1 [Download the .zip file](https://github.com/gilluminate/SyntaxHighlight/archive/master.zip)
-1 Extract the files to your <code>extensions</code> directory
-1 Add to the end of [LocalSettings.php](http://www.mediawiki.org/wiki/Manual:LocalSettings.php):
+* [Download the .zip file](https://github.com/gilluminate/SyntaxHighlight/archive/master.zip)
+* Extract the files to your <code>extensions</code> directory
+* Add to the end of [LocalSettings.php](http://www.mediawiki.org/wiki/Manual:LocalSettings.php):
 ```php
 require_once("$IP/extensions/SyntaxHighlight/SyntaxHighlight.php");
 ```
-1 Installation can now be verified through <code>Special:Version</code> page on your wiki
+* Installation can now be verified through <code>Special:Version</code> page on your wiki
 
 ## Configuration
 
