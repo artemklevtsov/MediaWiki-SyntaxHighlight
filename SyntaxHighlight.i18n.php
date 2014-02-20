@@ -2,8 +2,8 @@
 
 $messages = array();
 $messages['en'] = array( 
-    'syntaxhighlight-desc' => 'This extention allow to use <syntaxhighlight> tag for syntax highlightting by  [http://highlightjs.org highlight.js]'
+    'syntaxhighlight-desc' => 'This extention allow tadds **syntaxhighlight** tag tag that implemented using [http://highlightjs.org highlight.js] library.'
 );
 $messages['ru'] = array(
-    'syntaxhighlight-desc' => 'Это расширение позволяет использовать тег <syntaxhighlight> для подсветки синтаксиса с помощью [http://highlightjs.org highlight.js]'
+    'syntaxhighlight-desc' => 'Это расширение добавляет тег **syntaxhighlight**, который реализован с помощью библиотеки [http://highlightjs.org highlight.js]'
 );
