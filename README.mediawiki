@@ -1,4 +1,4 @@
-# MediaWiki-SyntaxHighlight
+= MediaWiki-SyntaxHighlight =
 
 This MediaWiki extension adds '''syntaxhighlight''' tag that is implemented using
 [http://highlightjs.org highlight.js] library.
@@ -11,7 +11,7 @@ This MediaWiki extension adds '''syntaxhighlight''' tag that is implemented usin
 
 === Step 1: Downloading ===
 
-You can download the snapshot [https://github.com/unikum/MediaWiki-SyntaxHighlight/archive/master.zip zip file] and extract the files to your <code>extensions</code> directory.For example using wget and unzip tools:
+You can download the snapshot [https://github.com/unikum/MediaWiki-SyntaxHighlight/archive/master.zip zip file] and extract the files to your <code>extensions</code> directory. For example using wget and unzip tools:
 
 <pre>
 cd /tmp
@@ -23,7 +23,21 @@ Also you can use a Git clone tool to clone https://github.com/unikum/MediaWiki-S
 
 <pre>
 cd $WIKIROOT/extentions
-git clone https://github.com/unikum/MediaWiki-SyntaxHighlight SyntaxHighlight
+git clone --recursive https://github.com/unikum/MediaWiki-SyntaxHighlight SyntaxHighlight
+</pre>
+
+=== Updating ===
+
+If you want update extention to latest version you can use Git pull command:
+
+<pre>
+git pull origin master
+</pre>
+
+Update highlight.js library you can with following command:
+
+<pre>
+git submodule update --remote --merge
 </pre>
 
 === Step 2: Installation ===
@@ -36,9 +50,283 @@ require_once "$IP/extensions/SyntaxHighlight/SyntaxHighlight.php";
 
 Installation can now be verified through <code>Special:Version</code> page on your wiki
 
+== Supported languages ==
+
+{| class="wikitable"
+! Code
+! Language
+|-
+| 1c || 1C
+|-
+| actionscript || ActionScript
+|-
+| apache || Apache
+|-
+| applescript || AppleScript
+|-
+| asciidoc || AsciiDoc
+|-
+| autohotkey || AutoHotkey
+|-
+| avrasm || AVR Assembler
+|-
+| axapta || Axapta
+|-
+| bash || Bash
+|-
+| brainfuck || Brainfuck
+|-
+| clojure || Clojure
+|-
+| cmake || CMake
+|-
+| coffeescript || CoffeeScript
+|-
+| cpp || C++
+|-
+| cs ||     C#
+|-
+| css || CSS
+|-
+| delphi || Delphi
+|-
+| diff || Diff
+|-
+| django || Django
+|-
+| d || D
+|-
+| dos || DOS .bat
+|-
+| elixir || Elixir
+|-
+| erlang || Erlang
+|-
+| erlang-repl || Erlang REPL
+|-
+| fix || FIX
+|-
+| fsharp || F#
+|-
+| glsl || GLSL
+|-
+| go || Go
+|-
+| haml || Haml
+|-
+| handlebars || Handlebars
+|-
+| haskell || Haskell
+|-
+| http || HTTP
+|-
+| ini || Ini
+|-
+| java || Java
+|-
+| javascript || JavaScript
+|-
+| json || JSON
+|-
+| lasso || Lasso
+|-
+| lisp || Lisp
+|-
+| livecodeserver || LiveCode server and revIgniter
+|-
+| lua || Lua
+|-
+| makefile || Makefile
+|-
+| markdown || Markdown
+|-
+| mathematica || Mathematica
+|-
+| matlab || Matlab
+|-
+| mel || MEL
+|-
+| mizar || Mizar
+|-
+| nginx || Nginx
+|-
+| nix || Nix
+|-
+| nsis || NSIS
+|-
+| objectivec || Objective C
+|-
+| ocaml || OCaml
+|-
+| oxygene || Oxygene
+|-
+| parser3 || Parser3
+|-
+| perl || Perl
+|-
+| php || PHP
+|-
+| profile || Python profile
+|-
+| protobuf || Protocol Buffers
+|-
+| python || Python
+|-
+| rib || RenderMan RIB
+|-
+| r || R
+|-
+| rsl || RenderMan RSL
+|-
+| ruby || Ruby
+|-
+| ruleslanguage || Oracle Rules Language
+|-
+| rust || Rust
+|-
+| scala || Scala
+|-
+| scilab || Scilab
+|-
+| scss || SCSS
+|-
+| smalltalk || Smalltalk
+|-
+| sql || SQL
+|-
+| tex || TeX
+|-
+| vala || Vala
+|-
+| vbnet || VB.NET
+|-
+| vbscript || VBScript
+|-
+| vhdl || VHDL
+|-
+| vim || Vim Script
+|-
+| x86asm || Intel x86 Assembly
+|-
+| xml || HTML, XML
+|}
+
+== Theme Styles ==
+
+{| class="wikitable"
+! Code
+! Style Name
+|-
+| default || Default
+|-
+| dark || Dark
+|-
+| far || FAR
+|-
+| idea || IDEA
+|-
+| sunburst || Sunburst
+|-
+| zenburn || Zenburn
+|-
+| vs || Visual Studio
+|-
+| ascetic || Ascetic
+|-
+| magula || Magula
+|-
+| github || GitHub
+|-
+| googlecode || Google Code
+|-
+| brown_paper || Brown Paper
+|-
+| school_book || School Book
+|-
+| ir_black || IR Black
+|-
+| solarized_dark || Solarized - Dark
+|-
+| solarized_light || Solarized - Light
+|-
+| arta || Arta
+|-
+| monokai || Monokai
+|-
+| monokai_sublime || Monokai Sublime
+|-
+| xcode || XCode
+|-
+| pojoaque || Pojoaque
+|-
+| rainbow || Rainbow
+|-
+| tomorrow || Tomorrow
+|-
+| tomorrow-night || Tomorrow Night
+|-
+| tomorrow-night-bright || Tomorrow Night Bright
+|-
+| tomorrow-night-blue || Tomorrow Night Blue
+|-
+| tomorrow-night-eighties || Tomorrow Night Eighties
+|-
+| railscasts || Railscasts
+|-
+| obsidian || Obsidian
+|-
+| docco || Docco
+|-
+| mono-blue || Mono Blue
+|-
+| foundation || Foundation
+|-
+| atelier-dune.dark || Atelier Dun - Dark
+|-
+| atelier-dune.light || Atelier Dun - Light
+|-
+| atelier-forest.dark || Atelier Forest - Dark
+|-
+| atelier-forest.light || Atelier Forest - Light
+|-
+| atelier-heath.dark || Atelier Heath - Dark
+|-
+| atelier-heath.light || Atelier Heath - Light
+|-
+| atelier-lakeside.dark || Atelier Lakeside - Dark
+|-
+| atelier-lakeside.light || Atelier Lakeside - Light
+|-
+| atelier-seaside.dark || Atelier Seaside - Dark
+|-
+| atelier-seaside.light || Atelier Seaside - Light
+|-
+| paraiso.dark || Paraiso - Dark
+|-
+| paraiso.light || Paraiso - Light
+|}
+
 == Configuration ==
 
 FIXME
+
+== Usage ==
+
+On the wiki page, you can now use "syntaxhighlight" elements:
+
+<pre><nowiki>
+<syntaxhighlight lang="php">
+<?php
+    $v = "string";    // sample initialization
+?>
+html text
+<?
+    echo $v;         // end of php code
+?>
+</syntaxhighlight>
+</nowiki></pre>
+
+You can specify language by <code>lang=""</code> parameter. If <code>lang</code> parameter isn't defined it will be detected automaticy.
 
 == License ==
 
