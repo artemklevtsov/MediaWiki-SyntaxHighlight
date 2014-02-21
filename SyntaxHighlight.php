@@ -14,13 +14,13 @@ $wgAutoloadClasses['SyntaxHighlight'] = dirname( __FILE__ ) . '/SyntaxHighlight.
 $wgExtensionMessagesFiles['SyntaxHighlight'] = dirname( __FILE__ ) . '/SyntaxHighlight.i18n.php';
 
 // Extention Credits
-$wgExtensionCredits['parserhook']['SyntaxHighlight'] = array(
+$wgExtensionCredits['parserhook'][] = array(
     'path' => __FILE__,
     'name' => 'SyntaxHighlight',
     'author' => 'Artem Klevtsov',
-    'url' => '',
+    'url' => 'https://github.com/unikum/MediaWiki-SyntaxHighlight',
     'version' => '0.1',
-    'description' => 'syntaxhighlight-desc'
+    'descriptionmsg' => 'syntaxhighlight-desc'
 );
 
 // Register parser hook
