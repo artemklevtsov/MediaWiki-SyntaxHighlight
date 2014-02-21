@@ -5,7 +5,10 @@ if (!defined('MEDIAWIKI')){
 }
 
 // Default options
-$wgSyntaxHighlightStyle = 'idea';
+if (! isset($wgSyntaxHighlightStyle)) {
+    $wgSyntaxHighlightStyle = 'idea';
+}
+
 $wgSyntaxHighlightStyleFile = 'highlight/styles/'.$wgSyntaxHighlightStyle.'.css';
 
 // Define localisation and body files
