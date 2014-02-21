@@ -5,13 +5,11 @@ if (!defined('MEDIAWIKI')){
 }
 
 // Default options
-if ( !isset( $wgSyntaxHighlightStyle ) ) {
-    $wgSyntaxHighlightStyle = 'magula';
-}
+$wgSyntaxHighlightStyle = 'default';
 
 // Define localisation and body files
-$wgAutoloadClasses['SyntaxHighlight'] = dirname( __FILE__ ) . '/SyntaxHighlight.body.php';
-$wgExtensionMessagesFiles['SyntaxHighlight'] = dirname( __FILE__ ) . '/SyntaxHighlight.i18n.php';
+$wgAutoloadClasses['SyntaxHighlight'] = dirname( __FILE__ ).'/SyntaxHighlight.body.php';
+$wgExtensionMessagesFiles['SyntaxHighlight'] = dirname( __FILE__ ).'/SyntaxHighlight.i18n.php';
 
 // Extention Credits
 $wgExtensionCredits['parserhook'][] = array(
@@ -33,6 +31,6 @@ $wgHooks['BeforePageDisplay'][] = 'SyntaxHighlight::onBeforePageDisplay';
 $wgResourceModules['ext.SyntaxHighlight'] = array(
     'localBasePath' => dirname(__FILE__),
     'remoteExtPath' => 'SyntaxHighlight',
-    'styles' => array('highlight/styles/'.$wgSyntaxHighlightStyle.'.css', 'style.css'),
+    'styles' => array(SyntaxHighlight::wfStyleFile(), 'style.css'),
     'scripts' => array('highlight/highlight.pack.js', 'init.js')
 );

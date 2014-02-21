@@ -24,4 +24,10 @@ class SyntaxHighlight {
         $out->addModules('ext.SyntaxHighlight');
         return true;
     }
+    
+    public static function wfStyleFile() {
+	global $wgSyntaxHighlightStyle;
+	$wgSyntaxHighlightStyleFile = 'highlight/styles/'.$wgSyntaxHighlightStyle.'.css';
+    }
+    
 }
