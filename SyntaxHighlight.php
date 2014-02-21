@@ -5,7 +5,8 @@ if (!defined('MEDIAWIKI')){
 }
 
 // Default options
-$wgSyntaxHighlightStyle = 'default';
+$wgSyntaxHighlightStyle = 'idea';
+$wgSyntaxHighlightStyleFile = 'highlight/styles/'.$wgSyntaxHighlightStyle.'.css';
 
 // Define localisation and body files
 $wgAutoloadClasses['SyntaxHighlight'] = dirname( __FILE__ ).'/SyntaxHighlight.body.php';
@@ -31,6 +32,6 @@ $wgHooks['BeforePageDisplay'][] = 'SyntaxHighlight::onBeforePageDisplay';
 $wgResourceModules['ext.SyntaxHighlight'] = array(
     'localBasePath' => dirname(__FILE__),
     'remoteExtPath' => 'SyntaxHighlight',
-    'styles' => array(SyntaxHighlight::wfStyleFile(), 'style.css'),
+    'styles' => array($wgSyntaxHighlightStyleFile, 'style.css'),
     'scripts' => array('highlight/highlight.pack.js', 'init.js')
 );
