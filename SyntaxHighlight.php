@@ -33,6 +33,6 @@ $wgHooks['BeforePageDisplay'][] = 'SyntaxHighlight::onBeforePageDisplay';
 $wgResourceModules['ext.SyntaxHighlight'] = array(
     'localBasePath' => dirname(__FILE__),
     'remoteExtPath' => 'SyntaxHighlight',
-    'styles' => array('highlight/styles/'.$wgSyntaxHighlightStyle.'.css'),
+    'styles' => array('highlight/styles/'.$wgSyntaxHighlightStyle.'.css', 'style.css'),
     'scripts' => array('highlight/highlight.pack.js', 'init.js')
 );
