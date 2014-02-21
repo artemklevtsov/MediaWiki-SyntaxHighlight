@@ -19,26 +19,8 @@ wget https://github.com/unikum/MediaWiki-SyntaxHighlight/archive/master.zip
 unzip master.zip -d $WIKIROOT/extensions/SyntaxHighlight
 </pre>
 
-Also you can use a Git clone tool to clone https://github.com/unikum/MediaWiki-SyntaxHighlight in the extensions directory of your wiki. For example using the Git command-line tool:
+You can download highlight.js library from [http://highlightjs.org/download/ this page]. Check needed languages and press "Download" button. Then extract <code>highlight.zip</code> to <code>SyntaxHighlight/highlight.js</code> directory.
 
-<pre>
-cd $WIKIROOT/extentions
-git clone --recursive https://github.com/unikum/MediaWiki-SyntaxHighlight SyntaxHighlight
-</pre>
-
-=== Updating ===
-
-If you want update extention to latest version you can use Git pull command:
-
-<pre>
-git pull origin master
-</pre>
-
-Update highlight.js library you can with following command:
-
-<pre>
-git submodule update --remote --merge
-</pre>
 
 === Step 2: Installation ===
 
@@ -331,3 +313,52 @@ You can specify language by <code>lang=""</code> parameter. If <code>lang</code>
 == License ==
 
 This Extention licensed under GPL v2 License.
+
+== Installation from Git ==
+
+=== Getting extension ===
+
+You can use a Git clone tool to clone https://github.com/unikum/MediaWiki-SyntaxHighlight in the extensions directory of your wiki. For example using the Git command-line tool from <code>wiki/extensions</code> directory:
+
+<pre>
+git clone https://github.com/unikum/MediaWiki-SyntaxHighlight SyntaxHighlight
+</pre>
+
+Make sure the below control executes from within wiki/extensions/ folder. Otherwise you need to move this folder from current location to wiki/extensions folder using
+
+<pre>
+mv <source> <destination>
+</pre>
+
+=== Getting highlight.js ===
+
+<pre>
+git clone https://github.com/isagalaev/highlight.js.git
+</pre>
+
+=== Building ===
+
+For build <code>highlight.pack.js</code> file manually you should have python3 installation.
+
+Building all available languages:
+
+<pre>
+cd highlight.js
+python3 tools/build.py
+</pre>
+
+Build for a browser using only common languages:
+
+<pre>
+python3 tools/build.py :common
+</pre>
+
+Build only specific languages:
+
+<pre>
+python3 tools/build.py perl php python ruby
+</pre>
+
+=== Copy script and styles ===
+
+Copy <code>build/highlight.pack.js</code> and <code>styles</code> directory to <code>$WIKIROOT/extentions/SyntaxHighlight/highlight.js</code> directory.
