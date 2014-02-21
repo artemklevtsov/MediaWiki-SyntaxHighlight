@@ -9,14 +9,10 @@ class SyntaxHighlight {
     public static function wfSyntaxHighlight($text, array $args, Parser $parser, PPFrame $frame) {
         if (isset($args['lang']) && $args['lang']) {
             $lang = $args['lang'];
-            $lang = strtolower( $lang );
-            $class = 'language-'.$lang; 
-        } else {
-            $class = "no-highlight";
+            $lang = strtolower($lang);
+            $class = 'language-'.$lang;
         }
-        $text = rtrim( $text );
-        $text = htmlspecialchars( $text );
-        $text = str_replace( '|', '&#124;', $text );
+        $text = rtrim($text);
         return '<pre><code class="'.$class.'">'.$text.'</code></pre>';
     }
 
