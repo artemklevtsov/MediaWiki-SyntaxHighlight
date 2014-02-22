@@ -24,7 +24,7 @@ You can download highlight.js library from [http://highlightjs.org/download/ thi
 
 === Step 2: Installation ===
 
-Add this line to the end of your [LocalSettings.php](http://www.mediawiki.org/wiki/Manual:LocalSettings.php):
+Add this line to the end of your [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php]:
 
 <pre>
 require_once "$IP/extensions/SyntaxHighlight/SyntaxHighlight.php";
@@ -32,265 +32,13 @@ require_once "$IP/extensions/SyntaxHighlight/SyntaxHighlight.php";
 
 Installation can now be verified through <code>Special:Version</code> page on your wiki
 
-== Supported languages ==
-
-{| class="wikitable"
-! Code
-! Language
-|-
-| 1c || 1C
-|-
-| actionscript || ActionScript
-|-
-| apache || Apache
-|-
-| applescript || AppleScript
-|-
-| asciidoc || AsciiDoc
-|-
-| autohotkey || AutoHotkey
-|-
-| avrasm || AVR Assembler
-|-
-| axapta || Axapta
-|-
-| bash || Bash
-|-
-| brainfuck || Brainfuck
-|-
-| clojure || Clojure
-|-
-| cmake || CMake
-|-
-| coffeescript || CoffeeScript
-|-
-| cpp || C++
-|-
-| cs ||     C#
-|-
-| css || CSS
-|-
-| delphi || Delphi
-|-
-| diff || Diff
-|-
-| django || Django
-|-
-| d || D
-|-
-| dos || DOS .bat
-|-
-| elixir || Elixir
-|-
-| erlang || Erlang
-|-
-| erlang-repl || Erlang REPL
-|-
-| fix || FIX
-|-
-| fsharp || F#
-|-
-| glsl || GLSL
-|-
-| go || Go
-|-
-| haml || Haml
-|-
-| handlebars || Handlebars
-|-
-| haskell || Haskell
-|-
-| http || HTTP
-|-
-| ini || Ini
-|-
-| java || Java
-|-
-| javascript || JavaScript
-|-
-| json || JSON
-|-
-| lasso || Lasso
-|-
-| lisp || Lisp
-|-
-| livecodeserver || LiveCode server and revIgniter
-|-
-| lua || Lua
-|-
-| makefile || Makefile
-|-
-| markdown || Markdown
-|-
-| mathematica || Mathematica
-|-
-| matlab || Matlab
-|-
-| mel || MEL
-|-
-| mizar || Mizar
-|-
-| nginx || Nginx
-|-
-| nix || Nix
-|-
-| nsis || NSIS
-|-
-| objectivec || Objective C
-|-
-| ocaml || OCaml
-|-
-| oxygene || Oxygene
-|-
-| parser3 || Parser3
-|-
-| perl || Perl
-|-
-| php || PHP
-|-
-| profile || Python profile
-|-
-| protobuf || Protocol Buffers
-|-
-| python || Python
-|-
-| rib || RenderMan RIB
-|-
-| r || R
-|-
-| rsl || RenderMan RSL
-|-
-| ruby || Ruby
-|-
-| ruleslanguage || Oracle Rules Language
-|-
-| rust || Rust
-|-
-| scala || Scala
-|-
-| scilab || Scilab
-|-
-| scss || SCSS
-|-
-| smalltalk || Smalltalk
-|-
-| sql || SQL
-|-
-| tex || TeX
-|-
-| vala || Vala
-|-
-| vbnet || VB.NET
-|-
-| vbscript || VBScript
-|-
-| vhdl || VHDL
-|-
-| vim || Vim Script
-|-
-| x86asm || Intel x86 Assembly
-|-
-| xml || HTML, XML
-|}
-
-== Theme Styles ==
-
-{| class="wikitable"
-! Code
-! Style Name
-|-
-| default || Default
-|-
-| dark || Dark
-|-
-| far || FAR
-|-
-| idea || IDEA
-|-
-| sunburst || Sunburst
-|-
-| zenburn || Zenburn
-|-
-| vs || Visual Studio
-|-
-| ascetic || Ascetic
-|-
-| magula || Magula
-|-
-| github || GitHub
-|-
-| googlecode || Google Code
-|-
-| brown_paper || Brown Paper
-|-
-| school_book || School Book
-|-
-| ir_black || IR Black
-|-
-| solarized_dark || Solarized - Dark
-|-
-| solarized_light || Solarized - Light
-|-
-| arta || Arta
-|-
-| monokai || Monokai
-|-
-| monokai_sublime || Monokai Sublime
-|-
-| xcode || XCode
-|-
-| pojoaque || Pojoaque
-|-
-| rainbow || Rainbow
-|-
-| tomorrow || Tomorrow
-|-
-| tomorrow-night || Tomorrow Night
-|-
-| tomorrow-night-bright || Tomorrow Night Bright
-|-
-| tomorrow-night-blue || Tomorrow Night Blue
-|-
-| tomorrow-night-eighties || Tomorrow Night Eighties
-|-
-| railscasts || Railscasts
-|-
-| obsidian || Obsidian
-|-
-| docco || Docco
-|-
-| mono-blue || Mono Blue
-|-
-| foundation || Foundation
-|-
-| atelier-dune.dark || Atelier Dun - Dark
-|-
-| atelier-dune.light || Atelier Dun - Light
-|-
-| atelier-forest.dark || Atelier Forest - Dark
-|-
-| atelier-forest.light || Atelier Forest - Light
-|-
-| atelier-heath.dark || Atelier Heath - Dark
-|-
-| atelier-heath.light || Atelier Heath - Light
-|-
-| atelier-lakeside.dark || Atelier Lakeside - Dark
-|-
-| atelier-lakeside.light || Atelier Lakeside - Light
-|-
-| atelier-seaside.dark || Atelier Seaside - Dark
-|-
-| atelier-seaside.light || Atelier Seaside - Light
-|-
-| paraiso.dark || Paraiso - Dark
-|-
-| paraiso.light || Paraiso - Light
-|}
-
 == Configuration ==
 
-FIXME
+You can specify highlight style by <code>$wgSyntaxHighlightStyle</code> in your [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php]:
+
+<pre>
+$wgSyntaxHighlightStyle = 'xcode';
+</pre>
 
 == Usage ==
 
@@ -308,7 +56,265 @@ html text
 </syntaxhighlight>
 </nowiki></pre>
 
-You can specify language by <code>lang=""</code> parameter. If <code>lang</code> parameter isn't defined it will be detected automaticy.
+You can specify language by <code>lang=""</code> parameter. If <code>lang</code> parameter isn't defined language will be detected automaticy.
+
+== Supported languages ==
+
+{| class="wikitable"
+! Code
+! Language
+|-
+| <code>1c</code> || 1C
+|-
+| <code>actionscript</code> || ActionScript
+|-
+| <code>apache</code> || Apache
+|-
+| <code>applescript</code> || AppleScript
+|-
+| <code>asciidoc</code> || AsciiDoc
+|-
+| <code>autohotkey</code> || AutoHotkey
+|-
+| <code>avrasm</code> || AVR Assembler
+|-
+| <code>axapta</code> || Axapta
+|-
+| <code>bash</code> || Bash
+|-
+| <code>brainfuck</code> || Brainfuck
+|-
+| <code>clojure</code> || Clojure
+|-
+| <code>cmake</code> || CMake
+|-
+| <code>coffeescript</code> || CoffeeScript
+|-
+| <code>cpp</code> || C++
+|-
+| <code>cs</code> ||     C#
+|-
+| <code>css</code> || CSS
+|-
+| <code>delphi</code> || Delphi
+|-
+| <code>diff</code> || Diff
+|-
+| <code>django</code> || Django
+|-
+| <code>d</code> || D
+|-
+| <code>dos</code> || DOS .bat
+|-
+| <code>elixir</code> || Elixir
+|-
+| <code>erlang</code> || Erlang
+|-
+| <code>erlang-repl</code> || Erlang REPL
+|-
+| <code>fix</code> || FIX
+|-
+| <code>fsharp</code> || F#
+|-
+| <code>glsl</code> || GLSL
+|-
+| <code>go</code> || Go
+|-
+| <code>haml</code> || Haml
+|-
+| <code>handlebars</code> || Handlebars
+|-
+| <code>haskell</code> || Haskell
+|-
+| <code>http</code> || HTTP
+|-
+| <code>ini</code> || Ini
+|-
+| <code>java</code> || Java
+|-
+| <code>javascript</code> || JavaScript
+|-
+| <code>json</code> || JSON
+|-
+| <code>lasso</code> || Lasso
+|-
+| <code>lisp</code> || Lisp
+|-
+| <code>livecodeserver</code> || LiveCode server and revIgniter
+|-
+| <code>lua</code> || Lua
+|-
+| <code>makefile</code> || Makefile
+|-
+| <code>markdown</code> || Markdown
+|-
+| <code>mathematica</code> || Mathematica
+|-
+| <code>matlab</code> || Matlab
+|-
+| <code>mel</code> || MEL
+|-
+| <code>mizar</code> || Mizar
+|-
+| <code>nginx</code> || Nginx
+|-
+| <code>nix</code> || Nix
+|-
+| <code>nsis</code> || NSIS
+|-
+| <code>objectivec</code> || Objective C
+|-
+| <code>ocaml</code> || OCaml
+|-
+| <code>oxygene</code> || Oxygene
+|-
+| <code>parser3</code> || Parser3
+|-
+| <code>perl</code> || Perl
+|-
+| <code>php</code> || PHP
+|-
+| <code>profile</code> || Python profile
+|-
+| <code>protobuf</code> || Protocol Buffers
+|-
+| <code>python</code> || Python
+|-
+| <code>rib</code> || RenderMan RIB
+|-
+| <code>r</code> || R
+|-
+| <code>rsl</code> || RenderMan RSL
+|-
+| <code>ruby</code> || Ruby
+|-
+| <code>ruleslanguage</code> || Oracle Rules Language
+|-
+| <code>rust</code> || Rust
+|-
+| <code>scala</code> || Scala
+|-
+| <code>scilab</code> || Scilab
+|-
+| <code>scss</code> || SCSS
+|-
+| <code>smalltalk</code> || Smalltalk
+|-
+| <code>sql</code> || SQL
+|-
+| <code>tex</code> || TeX
+|-
+| <code>vala</code> || Vala
+|-
+| <code>vbnet</code> || VB.NET
+|-
+| <code>vbscript</code> || VBScript
+|-
+| <code>vhdl</code> || VHDL
+|-
+| <code>vim</code> || Vim Script
+|-
+| <code>x86asm</code> || Intel x86 Assembly
+|-
+| <code>xml</code> || HTML, XML
+|}
+
+== Theme Styles ==
+
+You can show this style on [http://highlightjs.org/static/test.html live demo page].
+
+{| class="wikitable"
+! Code
+! Style Name
+|-
+| <code>default</code> || Default
+|-
+| <code>dark</code> || Dark
+|-
+| <code>far</code> || FAR
+|-
+| <code>idea</code> || IDEA
+|-
+| <code>sunburst</code> || Sunburst
+|-
+| <code>zenburn</code> || Zenburn
+|-
+| <code>vs</code> || Visual Studio
+|-
+| <code>ascetic</code> || Ascetic
+|-
+| <code>magula</code> || Magula
+|-
+| <code>github</code> || GitHub
+|-
+| <code>googlecode</code> || Google Code
+|-
+| <code>brown_paper</code> || Brown Paper
+|-
+| <code>school_book</code> || School Book
+|-
+| <code>ir_black</code> || IR Black
+|-
+| <code>solarized_dark</code> || Solarized - Dark
+|-
+| <code>solarized_light</code> || Solarized - Light
+|-
+| <code>arta</code> || Arta
+|-
+| <code>monokai</code> || Monokai
+|-
+| <code>monokai_sublime</code> || Monokai Sublime
+|-
+| <code>xcode</code> || XCode
+|-
+| <code>pojoaque</code> || Pojoaque
+|-
+| <code>rainbow</code> || Rainbow
+|-
+| <code>tomorrow</code> || Tomorrow
+|-
+| <code>tomorrow-night</code> || Tomorrow Night
+|-
+| <code>tomorrow-night-bright</code> || Tomorrow Night Bright
+|-
+| <code>tomorrow-night-blue</code> || Tomorrow Night Blue
+|-
+| <code>tomorrow-night-eighties</code> || Tomorrow Night Eighties
+|-
+| <code>railscasts</code> || Railscasts
+|-
+| <code>obsidian</code> || Obsidian
+|-
+| <code>docco</code> || Docco
+|-
+| <code>mono-blue</code> || Mono Blue
+|-
+| <code>foundation</code> || Foundation
+|-
+| <code>atelier-dune.dark</code> || Atelier Dun - Dark
+|-
+| <code>atelier-dune.light</code> || Atelier Dun - Light
+|-
+| <code>atelier-forest.dark</code> || Atelier Forest - Dark
+|-
+| <code>atelier-forest.light</code> || Atelier Forest - Light
+|-
+| <code>atelier-heath.dark</code> || Atelier Heath - Dark
+|-
+| <code>atelier-heath.light</code> || Atelier Heath - Light
+|-
+| <code>atelier-lakeside.dark</code> || Atelier Lakeside - Dark
+|-
+| <code>atelier-lakeside.light</code> || Atelier Lakeside - Light
+|-
+| <code>atelier-seaside.dark</code> || Atelier Seaside - Dark
+|-
+| <code>atelier-seaside.light</code> || Atelier Seaside - Light
+|-
+| <code>paraiso.dark</code> || Paraiso - Dark
+|-
+| <code>paraiso.light</code> || Paraiso - Light
+|}
 
 == License ==
 
