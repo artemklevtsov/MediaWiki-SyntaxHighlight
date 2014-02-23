@@ -19,7 +19,7 @@ wget https://github.com/unikum/MediaWiki-SyntaxHighlight/archive/master.zip
 unzip master.zip -d $WIKIROOT/extensions/SyntaxHighlight
 </pre>
 
-You can download highlight.js library from [http://highlightjs.org/download/ this page]. Check needed languages and press "Download" button. Then extract <code>highlight.zip</code> to <code>SyntaxHighlight/highlight.js</code> directory.
+This extention already include latest version of the highlight.js library which include all supported languages. You can also download highlight.js library with soppurt only a needed languages from [http://highlightjs.org/download/ this page]. Check a needed languages and press "Download" button. Then extract <code>highlight.zip</code> to <code>SyntaxHighlight/highlight.js</code> directory.
 
 
 === Step 2: Installation ===
@@ -30,7 +30,7 @@ Add this line to the end of your [http://www.mediawiki.org/wiki/Manual:LocalSett
 require_once "$IP/extensions/SyntaxHighlight/SyntaxHighlight.php";
 </pre>
 
-Installation can now be verified through <code>Special:Version</code> page on your wiki
+Installation can now be verified through <code>Special:Version</code> page on your wiki.
 
 == Configuration ==
 
