@@ -40,6 +40,8 @@ You can specify highlight style by <code>$wgSyntaxHighlightStyle</code> in your 
 $wgSyntaxHighlightStyle = 'xcode';
 </pre>
 
+You should put this line '''before''' <code>require_once</code> line.
+
 == Usage ==
 
 On the wiki page, you can now use "syntaxhighlight" elements:
