@@ -38,6 +38,7 @@ You can specify highlight style by <code>$wgSyntaxHighlightStyle</code> in your 
 
 <pre>
 $wgSyntaxHighlightStyle = 'xcode';
+require_once "$IP/extensions/SyntaxHighlight/SyntaxHighlight.php";
 </pre>
 
 You should put this line '''before''' <code>require_once</code> line.
@@ -61,6 +62,8 @@ html text
 You can specify language by <code>lang=""</code> parameter. If <code>lang</code> parameter isn't defined language will be detected automaticy.
 
 == Supported languages ==
+
+These are the languages that can be used in the '''lang''' parameter.
 
 {| class="wikitable"
 ! Code
@@ -223,7 +226,9 @@ You can specify language by <code>lang=""</code> parameter. If <code>lang</code>
 
 == Theme Styles ==
 
-You can show this style on [http://highlightjs.org/static/test.html live demo page].
+These are the styles that can be used in the '''$wgSyntaxHighlightStyle''' extention parameter.
+
+You can show this styles on [http://highlightjs.org/static/test.html live demo page].
 
 {| class="wikitable"
 ! Code
