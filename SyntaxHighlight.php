@@ -42,7 +42,7 @@ if ( isset($wgSyntaxHighlightAdditionalLanguages) ) {
 	$wgSyntaxHighlightAdditionalLanguages = array($wgSyntaxHighlightAdditionalLanguages);
     }
     foreach( $wgSyntaxHighlightAdditionalLanguages as $language ) {
-	if ( ! in_array($language, $wgSyntaxHighlightCommonLanguages) && file_exists(dirname(__FILE__).'/highlight.js/languages/'.$language.'.js') ) {
+	if ( ! in_array($language, $wgSyntaxHighlightCommonLanguages) && file_exists(dirname(__FILE__).'/highlight.js/languages/'.$language.'.min.js') ) {
 	    $wgResourceModules['ext.SyntaxHighlight']['scripts'][] = 'highlight.js/languages/'.$language.'.min.js';
 	}
     }
