@@ -24,6 +24,7 @@ $wgExtensionCredits['parserhook'][] = array(
 // Define localisation and body files
 $wgAutoloadClasses['SyntaxHighlight'] = dirname( __FILE__ ).'/SyntaxHighlight.body.php';
 $wgExtensionMessagesFiles['SyntaxHighlight'] = dirname( __FILE__ ).'/SyntaxHighlight.i18n.php';
+$wgMessageDirs['SyntaxHighlight'] = dirname( __FILE__ ).'/i18n';
 // Register hooks
 $wgHooks['ParserFirstCallInit'][] = 'SyntaxHighlight::wfSyntaxHighlight_Setup';
 $wgHooks['BeforePageDisplay'][] = 'SyntaxHighlight::onBeforePageDisplay';

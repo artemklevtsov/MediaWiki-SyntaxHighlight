@@ -1,0 +1,6 @@
+{
+    "@metadata": {
+        "authors": []
+    },
+    "syntaxhighlight-desc": "This extention allow tadds syntaxhighlight tag tag that implemented using [http://highlightjs.org highlight.js] library."
+}

@@ -1,0 +1,6 @@
+{
+    "@metadata": {
+        "authors": []
+    },
+    "syntaxhighlight-desc": "Это расширение добавляет тег syntaxhighlight, который реализован с помощью библиотеки [http://highlightjs.org highlight.js]."
+}
